@@ -1,0 +1,19 @@
+{
+  "name": "express_app_project",
+  "version": "1.0.0",
+  "description": "A package.json file for the express_app_project",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/iamwaswa/express_app_project.git"
+  },
+  "author": "Waswa Olunga",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/iamwaswa/express_app_project/issues"
+  },
+  "homepage": "https://github.com/iamwaswa/express_app_project#readme"
+}
