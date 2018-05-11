@@ -7,28 +7,33 @@ app.get(`/`, function (req, res) {
 
 app.get(`/speak/:animal`, function (req, res) {
     const animal = req.params.animal;
-    res.send(`The pig says ${produceAnimalSound(animal)}`);
+    
+    if (hasAnimal(animal)){
+        res.send(`The ${animal} says ${animalSounds()[animal]}`);
+    } else {
+        res.send(`The animal does not exist!`);
+    }
 });
 
-function produceAnimalSound(animal) {
+function hasAnimal(animal){
+    return animalSounds().hasOwnProperty(animal);
+}
 
-    if (animal === `pig`) {
-        return `\'Oink\'`;
-    } else if (animal === `cow`) {
-        return `\'Moo\'`;
-    } else if (animal === `dog`) {
-        return `\'Moo\'`;
-    }
-
+function animalSounds() {
+    return {
+        pig: `\'Oink\'`,
+        cow: `\'Moo\'`,
+        dog: `\'Woof\'`
+    };
 }
 
 app.get(`/repeat/:word/:numRepeats`, function (req, res) {
     const word = `${req.params.word} `;
-    const numRepeats = req.params.numRepeats;
-    res.send(`${repeatHello(word, numRepeats)}`);
+    const numRepeats = Number(req.params.numRepeats);
+    res.send(`${repeatWord(word, numRepeats)}`);
 });
 
-function repeatHello(word, numRepeats){
+function repeatWord(word, numRepeats){
 
     const result = ``;
     const targetLength = word.length * numRepeats;
