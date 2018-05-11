@@ -15,5 +15,8 @@
   "bugs": {
     "url": "https://github.com/iamwaswa/express_app_project/issues"
   },
-  "homepage": "https://github.com/iamwaswa/express_app_project#readme"
+  "homepage": "https://github.com/iamwaswa/express_app_project#readme",
+  "dependencies": {
+    "express": "^4.16.3"
+  }
 }
